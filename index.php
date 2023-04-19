@@ -1,0 +1,201 @@
+<?php
+require_once("config/conexion.php");
+require_once("Modelos/menu.php");
+$menu = new Menu();
+$optmenu = $menu->option_Menu();
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de vida CSS</title>
+    <!-- estilos de letra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+    <!-- Iconos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Estilos -->
+    <!-- cambios nuevos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="principal">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <h2>Cristian<span>Castillo Fuentes</span></h2>
+                </div>
+                <ul class="menu">
+                    <li>
+                        <a href="#Inicio">Inicio</a>
+                    </li>
+                    <?php
+                        for($i=0; $i < sizeof($optmenu); $i++) {
+                    
+                    ?>
+                    <li><a href="#Inicio<?php echo $optmenu[$i]["opcion"]?>"><?php echo $optmenu[$i]["url"]?></a></li>
+
+                    <?php
+                    }
+                    ?>
+
+
+                    
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <div class="info-contenido">
+                <h1>Bienvenidos</h1>
+                <p>Cordial salud
+                    Me llamo Cristian Fabian Castillo Fuentes tengo 20 años y estudio Ingeniería de Sistemas de la Universidad Minuto de Dios de Girardot Cundinamarca. Me gusta aprender nuevas cosas y me encanta la tecnología. Estoy muy interesado en el desarrollo de software y la programación. Estoy trabajando duro para mejorar mis habilidades y convertirme en un profesional de la industria de la tecnología.</p>
+                <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001811456" class="btn-download"><i class='bx bxs-file-pdf'></i>Hoja de vida</a>
+            </div>
+            <div class="info-image">
+                <div class="photo">
+                    <img src="imagenes/cri.jpg" alt="foto">
+                </div>
+                <h2>Profesion: Ingenieria de sistemas</h2>
+                <div class="redes">
+                    <a href="https://www.facebook.com/christiancastillo.0224?mibextid=ZbWKwL"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href=""><i class='bx bxl-gmail'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://wa.me/573228431911"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="https://instagram.com/castillofabian730?igshid=ZDdkNTZiNTM="><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="about" id="about">
+        <div class="content-about">
+            <h2>Descripción</h2>
+            <p>Cordial salud
+                Me llamo Cristian Fabian Castillo Fuentes tengo 20 años y estudio Ingeniería de Sistemas de la Universidad Minuto de Dios de Girardot Cundinamarca. Me gusta aprender nuevas cosas y me encanta la tecnología. Estoy muy interesado en el desarrollo de software y la programación. Estoy trabajando duro para mejorar mis habilidades y convertirme en un profesional de la industria de la tecnología.</p>
+            <div class="content">
+                <div class="info-personal">
+                    <h3>Datos personales</h3>
+                    <ul>
+                        <li>
+                            Dirección: calle 20 1 ABIS 73 BOCAS
+                        </li>
+                        <li>
+                            Celular: 3228431911
+                        </li>
+                        <li>
+                            Email: castillofabian060@gmail.com
+                        </li>
+                        <li>
+                            Profesión Ingenieria de sistemas
+                        </li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="info-intereses">
+                    <h3>Intereses personales</h3>
+                    <div class="content">
+                        <div class="intereses">
+                            <i class='bx bx-joystick'></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="intereses">
+                            <i class='bx bx-headphone'></i>
+                            <span>Musica</span>
+                        </div>
+                        <div class="intereses">
+                            <i class='bx bxs-car'></i>
+                            <span>Viajar</span>
+                        </div>
+                        <div class="intereses">
+                            <i class='bx bx-run'></i>
+                            <span>Ejercicio</span>
+                        </div>
+                        <div class="intereses">
+                            <i class='bx bxs-dog'></i>
+                            <span>Animales</span>
+                        </div>
+                        <div class="intereses">
+                            <i class='bx bx-camera'></i>
+                            <span>Fotos</span>
+                        </div>
+                        <div class="intereses">
+                            <i class='bx bx-tennis-ball'></i>
+                            <span>Tenis</span>
+                        </div>
+                        <div class="intereses">
+                            <i class='bx bx-movie-play'></i>
+                            <span>Peliculas</span>
+                        </div>
+                        <div class="intereses">
+                            <i class='bx bx-data'></i>
+                            <span>Bases de<br>Datos</span>
+                        </div>
+                        <div class="intereses">
+                            <i class='bx bx-chip'></i>
+                            <span>Tecnologia</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="forta">
+        <div class="Fortalezas" id="Fortalezas">
+          <h2 class="frase">Fortalezas</h2>
+          <ul class="cf">
+            <li>Comunicación efectiva</li>
+            <li>Liderazgo</li>
+            <li>Resolución de problemas</li>
+            <li>Capacidad de trabajo y dedicación</li>
+            <li>Resolver conflictos</li>
+            <li>Motivación para alcanzar objetivos.</li>
+          </ul>
+        </div>
+      
+        <div class="estudios">
+          <h2 class="frase">Estudios</h2>
+          <ul class="cf">
+            <li>Certificación de la piloto - Administracion de empresas</li>
+            <li>Certificación  - Administración de sistemas y servicios de infraestructura de TI</li>
+          </ul>
+        </div>
+      </section>
+    <div class="formulario" id="Contacto">
+        <form action="https://formsubmit.co/castillofabian060@gmail.com" method="POST">
+            <h2 class="contacto">Contacto</h2>
+            <div class="input-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <label for="telefono">Telefono</label>
+                <input type="tel" name="telefono" id="telefono" placeholder="Telefono">
+                <label for="correo">Correo</label>
+                <input type="correo" name="correo" id="correo" placeholder="Correo">
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Mensaje"></textarea>
+                <div class="form-txt">
+                    <a href="#">Politica de privacidad</a>
+                    <a href="#">Politica de privacidad</a>
+                </div>
+                <input class="btn" type="submit" value="Enviar">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+                <input type="hidden" name="_captcha" value="false">
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="container">
+            <br>
+            <br>
+          <p>Derechos reservados © 2023. Mi sitio web</p>
+        </div>
+      </footer>
+      
+</body>
+</html>
